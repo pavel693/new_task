@@ -95,4 +95,16 @@ public class CircleIntersectionTest {
                 .getCirclesIntersection(100, 150, 50, 50, 1e8f, 1e8f, 50, 50, -30, -30);
         assertThat((1249999.4f), is(result));
     }
+
+    @Test(expected = Exception.class)
+    public void circleException1() {
+        float result = CircleIntersection
+                .getCirclesIntersection(100, 150, 50, 50, 1e8f, -1e8f, 50, 50, -30, -30);
+    }
+
+    @Test(expected = Exception.class)
+    public void circleException2() {
+        float result = CircleIntersection
+                .getCirclesIntersection(100, -150, 50, 50, 1e8f, 1e8f, 50, 50, -30, -30);
+    }
 }

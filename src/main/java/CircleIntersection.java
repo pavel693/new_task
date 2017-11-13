@@ -19,6 +19,9 @@ public class CircleIntersection {
     public static float getCirclesIntersection(float r1, float r2, float x1, float y1,
                                                float x2, float y2, float vx1, float vy1,
                                                float vx2, float vy2) {
+        if (r1 <= 0 || r2 <= 0 || x1 <= 0 || y1 <= 0 || x2 <= 0 || y2 <= 0) {
+            throw new IllegalArgumentException("This argument can't be used in this method");
+        }
         // if circles have the same centers coordinates and the same radiuses it is imposition
         if (r1 == r2 && x1 == x2 && y1 == y2) {
             return 0;
