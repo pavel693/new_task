@@ -27,6 +27,21 @@ public class CircleIntersectionTest {
     }
 
     @Test
+    public void circleDoNotIntersect4() {
+        for (long i = 0; i < 1e7; i++) {
+            float r1 = (float) (Math.random() * 1e2f + 1);
+            float x1 = (float) (Math.random() * 1e8f + 1);
+            float y1 = (float) (Math.random() * 1e8f + 1);
+            float vx1 = (float) (Math.random() * 1e2f + 1);
+            float vy1 = (float) (Math.random() * 1e2f + 1);
+            float coefficient = (float) (Math.random() + 2);
+            float result = CircleIntersection
+                    .getCirclesIntersection(r1, r1 * coefficient, x1, y1, x1 * coefficient, y1 * coefficient, vx1, vy1, vx1 * coefficient, vy1 * coefficient);
+            assertThat((-1f), is(result));
+        }
+    }
+
+    @Test
     public void circleHaveAlreadyIntersected1() {
         float result = CircleIntersection
                 .getCirclesIntersection(1, 2, 2, 2, 5, 2, -1, 1, 1, 1);
