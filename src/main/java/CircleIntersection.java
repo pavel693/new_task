@@ -28,8 +28,8 @@ public class CircleIntersection {
      * @return a {@code float} rounded to the five position after dot. If result is
      * {zero} it means that the circles have already intersected from start
      * position. Or if you get {-1} it means that the circles won't intersect
-     * @throws IllegalArgumentException if @param r1, r2, x1, y1, x2, y2,
-     *                                  vx1, vy1, vx2, vy2 lower than zero
+     * @throws IllegalArgumentException if @param r1, r2, x1, y1, x2, y2, vx1, vy1,
+     *                                  vx2, vy2 lower than zero or equals zero
      */
     public static float getCirclesIntersection(float r1, float r2, float x1, float y1,
                                                float x2, float y2, float vx1, float vy1,
