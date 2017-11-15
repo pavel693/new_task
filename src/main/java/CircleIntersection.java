@@ -44,7 +44,7 @@ public class CircleIntersection {
         /**
          * in next three lines we find square distance between centers of the circle and square sum
          * and subtraction of radiuses, square because it is faster then find a square root in
-         * formula of distance between two points (sqrt((x2-x1)^2 - (y2-y1)^2))
+         * formula of distance between two points (sqrt((x2-x1)^2 + (y2-y1)^2))
          */
         float distanceBetweenCentersInSquare = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
         float radiusSubtractionInSquare = (r1 - r2) * (r1 - r2);
